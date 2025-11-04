@@ -8,87 +8,40 @@
   </head>
   <body class="bg-slate-50 text-slate-800">
     <!-- Topbar -->
-    <header
-      class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200"
-    >
-      <div
-        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between"
-      >
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <div class="flex items-center gap-3">
-          <!-- letakkan file di: /public/img/logo-kab-mimika.png -->
-          <img
-            src="img/logo-kab-mimika.png"
-            alt="Logo Kabupaten Mimika"
-            class="w-20 h-20 object-contain mb-2"
-          />
+          <img src="img/logo-kab-mimika.png" alt="Logo Kabupaten Mimika" class="w-20 h-20 object-contain mb-2" />
           <div>
-            <h1 class="text-base sm:text-lg font-semibold leading-tight">
-              LKH ASN Bapenda Kabupaten Mimika
-            </h1>
-            <p class="text-xs text-slate-500 -mt-0.5">
-              Sistem Pelaporan Kinerja Harian • Khusus Bapenda
-            </p>
+            <h1 class="text-base sm:text-lg font-semibold leading-tight">LKH ASN Bapenda Kabupaten Mimika</h1>
+            <p class="text-xs text-slate-500 -mt-0.5">Sistem Pelaporan Kinerja Harian • Khusus Bapenda</p>
           </div>
         </div>
         <div class="hidden sm:flex items-center gap-3">
-          <span
-            id="roleBadge"
-            class="px-3 py-1.5 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200"
-          >
-            ASN – Badan Pendapatan Daerah
-          </span>
+          <span id="roleBadge" class="px-3 py-1.5 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">ASN – Badan Pendapatan Daerah</span>
           <div class="flex items-center gap-2">
             <span class="text-sm text-slate-600">Fahrizal M.</span>
-            <img
-              class="w-8 h-8 rounded-full"
-              src="https://ui-avatars.com/api/?name=ASN+Bapenda&background=10b981&color=fff"
-              alt="avatar"
-            />
+            <img class="w-8 h-8 rounded-full" src="https://ui-avatars.com/api/?name=ASN+Bapenda&background=10b981&color=fff" alt="avatar"/>
           </div>
         </div>
       </div>
     </header>
 
-    <div
-      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-1 lg:grid-cols-[250px_minmax(0,1fr)] gap-6"
-    >
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-1 lg:grid-cols-[250px_minmax(0,1fr)] gap-6">
       <!-- Sidebar -->
       <aside class="lg:sticky lg:top-20">
         <nav class="bg-white border border-slate-200 rounded-2xl p-3">
           <ul class="space-y-1" id="menu">
-            <li>
-              <a href="#/dashboard" class="navlink"
-                ><span>🏠</span> Dashboard</a
-              >
-            </li>
-            <li>
-              <a href="#/input" class="navlink"><span>📝</span> Input LKH</a>
-            </li>
-            <li>
-              <a href="#/riwayat" class="navlink"><span>📚</span> Riwayat</a>
-            </li>
-            <li>
-              <a href="#/rekap" class="navlink"
-                ><span>📊</span> Rekap & Unduh</a
-              >
-            </li>
-            <li>
-              <a href="#/skp" class="navlink"
-                ><span>📄</span> SKP / Rencana Kerja</a
-              >
-            </li>
-            <li>
-              <a href="#/pengaturan" class="navlink"
-                ><span>⚙️</span> Pengaturan</a
-              >
-            </li>
+            <li><a href="#/dashboard" class="navlink"><span>🏠</span> Dashboard</a></li>
+            <li><a href="#/input" class="navlink"><span>📝</span> Input LKH</a></li>
+            <li><a href="#/riwayat" class="navlink"><span>📚</span> Riwayat</a></li>
+            <li><a href="#/rekap" class="navlink"><span>📊</span> Rekap & Unduh</a></li>
+            <li><a href="#/skp" class="navlink"><span>📄</span> SKP / Rencana Kerja</a></li>
+            <li><a href="#/pengaturan" class="navlink"><span>⚙️</span> Pengaturan</a></li>
           </ul>
         </nav>
         <div class="mt-4 text-xs text-slate-500">
-          <p>
-            Catatan: Mockup statis, data contoh tersimpan di
-            <code>localStorage</code>.
-          </p>
+          <p>Catatan: Mockup statis, data contoh tersimpan di <code>localStorage</code>.</p>
         </div>
       </aside>
 
@@ -96,15 +49,11 @@
       <main class="min-h-[70vh] space-y-6">
         <!-- DASHBOARD -->
         <section id="page-dashboard" class="page hidden">
-          <!-- Filters -->
           <div class="bg-white rounded-2xl border border-slate-200 p-4">
             <div class="flex flex-wrap items-center gap-3">
               <div>
                 <label class="block text-xs text-slate-500">Periode</label>
-                <select
-                  id="dashPeriod"
-                  class="mt-1 w-48 px-3 py-2 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                >
+                <select id="dashPeriod" class="mt-1 w-48 px-3 py-2 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500">
                   <option value="harian" selected>Harian</option>
                   <option value="mingguan">Mingguan</option>
                   <option value="bulanan">Bulanan</option>
@@ -113,75 +62,34 @@
               </div>
               <div>
                 <label class="block text-xs text-slate-500">Unit Kerja</label>
-                <select
-                  id="dashUnit"
-                  class="mt-1 w-56 px-3 py-2 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                >
+                <select id="dashUnit" class="mt-1 w-56 px-3 py-2 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500">
                   <option>Badan Pendapatan Daerah</option>
                 </select>
               </div>
-              <button
-                id="btnRefreshDash"
-                class="mt-5 inline-flex items-center justify-center px-3.5 py-2 rounded-xl bg-emerald-600 text-white text-sm"
-              >
-                Terapkan
-              </button>
+              <button id="btnRefreshDash" class="mt-5 inline-flex items-center justify-center px-3.5 py-2 rounded-xl bg-emerald-600 text-white text-sm">Terapkan</button>
             </div>
           </div>
 
-          <!-- KPI Cards -->
           <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
-            <div class="kpi-card">
-              <div class="kpi-title">Total LKH Terkirim</div>
-              <div class="kpi-value" id="kpiTotal">0</div>
-              <div class="kpi-sub">Periode aktif</div>
-            </div>
-            <div class="kpi-card">
-              <div class="kpi-title">Menunggu Verifikasi</div>
-              <div class="kpi-value" id="kpiPending">0</div>
-              <div class="kpi-sub">Menunggu pengecekan internal</div>
-            </div>
-            <div class="kpi-card">
-              <div class="kpi-title">Disetujui</div>
-              <div class="kpi-value" id="kpiApproved">0</div>
-              <div class="kpi-sub">Telah diverifikasi</div>
-            </div>
-            <div class="kpi-card">
-              <div class="kpi-title">Ditolak / Revisi</div>
-              <div class="kpi-value" id="kpiRejected">0</div>
-              <div class="kpi-sub">Butuh perbaikan</div>
-            </div>
+            <div class="kpi-card"><div class="kpi-title">Total LKH Terkirim</div><div class="kpi-value" id="kpiTotal">0</div><div class="kpi-sub">Periode aktif</div></div>
+            <div class="kpi-card"><div class="kpi-title">Menunggu Verifikasi</div><div class="kpi-value" id="kpiPending">0</div><div class="kpi-sub">Menunggu pengecekan internal</div></div>
+            <div class="kpi-card"><div class="kpi-title">Disetujui</div><div class="kpi-value" id="kpiApproved">0</div><div class="kpi-sub">Telah diverifikasi</div></div>
+            <div class="kpi-card"><div class="kpi-title">Ditolak / Revisi</div><div class="kpi-value" id="kpiRejected">0</div><div class="kpi-sub">Butuh perbaikan</div></div>
           </div>
 
-          <!-- Simple chart placeholder -->
           <div class="bg-white rounded-2xl border border-slate-200 p-4">
             <div class="flex items-center justify-between mb-2">
-              <h3 class="text-sm font-semibold">
-                Distribusi Status LKH (Dummy)
-              </h3>
-              <button
-                class="text-xs px-2 py-1 rounded-lg border border-slate-200"
-              >
-                Ekspor PNG
-              </button>
+              <h3 class="text-sm font-semibold">Distribusi Status LKH (Dummy)</h3>
+              <button class="text-xs px-2 py-1 rounded-lg border border-slate-200">Ekspor PNG</button>
             </div>
-            <div
-              class="w-full h-48 grid grid-cols-12 items-end gap-2"
-              id="barChart"
-            ></div>
-            <div
-              class="mt-2 grid grid-cols-12 text-[11px] text-slate-500"
-              id="barLabel"
-            ></div>
+            <div class="w-full h-48 grid grid-cols-12 items-end gap-2" id="barChart"></div>
+            <div class="mt-2 grid grid-cols-12 text-[11px] text-slate-500" id="barLabel"></div>
           </div>
         </section>
 
         <!-- INPUT LKH -->
         <section id="page-input" class="page hidden">
-          <form
-            id="formLkh"
-            class="bg-white rounded-2xl border border-slate-200 p-4 space-y-4"
-          >
+          <form id="formLkh" class="bg-white rounded-2xl border border-slate-200 p-4 space-y-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label class="label">Tanggal</label>
@@ -190,49 +98,25 @@
               <div>
                 <label class="label">Unit Kerja</label>
                 <select id="fUnit" class="input" required>
-                  <option value="Badan Pendapatan Daerah" selected>
-                    Badan Pendapatan Daerah
-                  </option>
+                  <option value="Badan Pendapatan Daerah" selected>Badan Pendapatan Daerah</option>
                 </select>
               </div>
               <div class="md:col-span-2">
                 <label class="label">Uraian Kegiatan</label>
-                <textarea
-                  id="fUraian"
-                  class="input h-28"
-                  placeholder="Tulis uraian kegiatan yang dilakukan…"
-                  required
-                ></textarea>
+                <textarea id="fUraian" class="input h-28" placeholder="Tulis uraian kegiatan yang dilakukan…" required></textarea>
               </div>
               <div>
                 <label class="label">Output</label>
-                <input
-                  id="fOutput"
-                  class="input"
-                  placeholder="Contoh: Notulen rapat"
-                  required
-                />
+                <input id="fOutput" class="input" placeholder="Contoh: Notulen rapat" required />
               </div>
               <div class="grid grid-cols-3 gap-3">
                 <div>
                   <label class="label">Volume</label>
-                  <input
-                    type="number"
-                    id="fVolume"
-                    class="input"
-                    min="1"
-                    value="1"
-                    required
-                  />
+                  <input type="number" id="fVolume" class="input" min="1" value="1" required />
                 </div>
                 <div>
                   <label class="label">Satuan</label>
-                  <input
-                    id="fSatuan"
-                    class="input"
-                    placeholder="dokumen/jam/kegiatan"
-                    required
-                  />
+                  <input id="fSatuan" class="input" placeholder="dokumen/jam/kegiatan" required />
                 </div>
                 <div>
                   <label class="label">Kategori</label>
@@ -253,42 +137,28 @@
               <div class="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label class="label">Tautan Bukti (opsional)</label>
-                  <input
-                    id="fBukti"
-                    class="input"
-                    placeholder="https://drive.google.com/..."
-                  />
+                  <input id="fBukti" class="input" placeholder="https://drive.google.com/..." />
                 </div>
                 <div>
                   <label class="label">Lokasi (opsional)</label>
-                  <input
-                    id="fLokasi"
-                    class="input"
-                    placeholder="Kantor/Distrik/Online"
-                  />
+                  <input id="fLokasi" class="input" placeholder="Kantor/Distrik/Online" />
                 </div>
               </div>
             </div>
             <div class="flex flex-wrap gap-3 justify-end pt-2">
-              <button type="button" id="btnDraft" class="btn ghost">
-                Simpan Draft
-              </button>
+              <button type="button" id="btnDraft" class="btn ghost">Simpan Draft</button>
               <button type="submit" class="btn primary">Kirim LKH</button>
             </div>
           </form>
         </section>
 
-        <!-- RIWAYAT -->
+        <!-- RIWAYAT (SUDAH LENGKAP SEMUA FIELD) -->
         <section id="page-riwayat" class="page hidden">
           <div class="bg-white rounded-2xl border border-slate-200 p-4">
             <div class="flex flex-wrap items-center justify-between gap-3">
               <h3 class="text-sm font-semibold">Riwayat LKH Saya</h3>
               <div class="flex items-center gap-2">
-                <input
-                  id="searchHistory"
-                  class="input !h-9 !py-1.5 !text-sm"
-                  placeholder="Cari uraian…"
-                />
+                <input id="searchHistory" class="input !h-9 !py-1.5 !text-sm" placeholder="Cari uraian…" />
                 <select id="filterStatus" class="input !h-9 !py-1.5 !text-sm">
                   <option value="">Semua status</option>
                   <option value="PENDING">Pending</option>
@@ -298,14 +168,21 @@
                 </select>
               </div>
             </div>
+
             <div class="mt-4 overflow-x-auto">
               <table class="w-full text-sm">
                 <thead>
                   <tr class="text-left text-slate-500 border-b">
                     <th class="py-2">Tanggal</th>
+                    <th>Unit</th>
                     <th>Uraian</th>
                     <th>Output</th>
-                    <th class="text-center">Vol</th>
+                    <th class="text-center">Volume</th>
+                    <th>Satuan</th>
+                    <th>Kategori</th>
+                    <th>Jam</th>
+                    <th>Bukti</th>
+                    <th>Lokasi</th>
                     <th>Status</th>
                     <th class="text-right">Aksi</th>
                   </tr>
@@ -320,29 +197,10 @@
         <section id="page-rekap" class="page hidden">
           <div class="bg-white rounded-2xl border border-slate-200 p-4">
             <div class="flex flex-wrap items-end gap-3">
-              <div>
-                <label class="label">Dari</label>
-                <input type="date" id="rFrom" class="input" />
-              </div>
-              <div>
-                <label class="label">Sampai</label>
-                <input type="date" id="rTo" class="input" />
-              </div>
-              <div>
-                <label class="label">Pegawai</label>
-                <input
-                  id="rPegawai"
-                  class="input"
-                  placeholder="Nama/NIP (opsional)"
-                />
-              </div>
-              <div>
-                <label class="label">Unit</label>
-                <select id="rUnit" class="input">
-                  <option value="">Semua</option>
-                  <option>Badan Pendapatan Daerah</option>
-                </select>
-              </div>
+              <div><label class="label">Dari</label><input type="date" id="rFrom" class="input" /></div>
+              <div><label class="label">Sampai</label><input type="date" id="rTo" class="input" /></div>
+              <div><label class="label">Pegawai</label><input id="rPegawai" class="input" placeholder="Nama/NIP (opsional)" /></div>
+              <div><label class="label">Unit</label><select id="rUnit" class="input"><option value="">Semua</option><option>Badan Pendapatan Daerah</option></select></div>
               <button id="btnRekap" class="btn primary">Tampilkan</button>
               <button id="btnExport" class="btn ghost">Unduh CSV</button>
             </div>
@@ -369,77 +227,27 @@
         <!-- SKP / RENCANA KERJA -->
         <section id="page-skp" class="page hidden">
           <div class="grid lg:grid-cols-2 gap-4">
-            <!-- Data Pegawai -->
-            <div
-              class="bg-white rounded-2xl border border-slate-200 p-4 space-y-3"
-            >
+            <div class="bg-white rounded-2xl border border-slate-200 p-4 space-y-3">
               <h3 class="text-sm font-semibold">Data Pegawai yang Dinilai</h3>
               <form id="formPegawai" class="grid sm:grid-cols-2 gap-3">
-                <input
-                  id="pNama"
-                  class="input sm:col-span-2"
-                  placeholder="Nama"
-                  required
-                />
+                <input id="pNama" class="input sm:col-span-2" placeholder="Nama" required />
                 <input id="pNip" class="input" placeholder="NIP" required />
-                <input
-                  id="pPangkat"
-                  class="input"
-                  placeholder="Pangkat/Golongan"
-                  required
-                />
-                <input
-                  id="pJabatan"
-                  class="input sm:col-span-2"
-                  placeholder="Jabatan"
-                  required
-                />
-                <input
-                  id="pUnit"
-                  class="input sm:col-span-2"
-                  placeholder="Unit Kerja"
-                  required
-                />
-                <button class="btn primary sm:col-span-2">
-                  Simpan Pegawai
-                </button>
+                <input id="pPangkat" class="input" placeholder="Pangkat/Golongan" required />
+                <input id="pJabatan" class="input sm:col-span-2" placeholder="Jabatan" required />
+                <input id="pUnit" class="input sm:col-span-2" placeholder="Unit Kerja" required />
+                <button class="btn primary sm:col-span-2">Simpan Pegawai</button>
               </form>
             </div>
 
-            <!-- Pejabat Penilai -->
-            <div
-              class="bg-white rounded-2xl border border-slate-200 p-4 space-y-3"
-            >
+            <div class="bg-white rounded-2xl border border-slate-200 p-4 space-y-3">
               <h3 class="text-sm font-semibold">Pejabat Penilai Kinerja</h3>
               <form id="formPenilai" class="grid sm:grid-cols-2 gap-3">
-                <input
-                  id="jNama"
-                  class="input sm:col-span-2"
-                  placeholder="Nama"
-                  required
-                />
+                <input id="jNama" class="input sm:col-span-2" placeholder="Nama" required />
                 <input id="jNip" class="input" placeholder="NIP" required />
-                <input
-                  id="jPangkat"
-                  class="input"
-                  placeholder="Pangkat/Golongan"
-                  required
-                />
-                <input
-                  id="jJabatan"
-                  class="input sm:col-span-2"
-                  placeholder="Jabatan"
-                  required
-                />
-                <input
-                  id="jUnit"
-                  class="input sm:col-span-2"
-                  placeholder="Unit Kerja"
-                  required
-                />
-                <button class="btn primary sm:col-span-2">
-                  Simpan Penilai
-                </button>
+                <input id="jPangkat" class="input" placeholder="Pangkat/Golongan" required />
+                <input id="jJabatan" class="input sm:col-span-2" placeholder="Jabatan" required />
+                <input id="jUnit" class="input sm:col-span-2" placeholder="Unit Kerja" required />
+                <button class="btn primary sm:col-span-2">Simpan Penilai</button>
               </form>
             </div>
           </div>
@@ -455,34 +263,12 @@
 
             <form id="formRhk" class="grid md:grid-cols-12 gap-3 mt-3">
               <input id="rNo" class="input md:col-span-1" placeholder="No" />
-              <input
-                id="rPimpinan"
-                class="input md:col-span-3"
-                placeholder="Rencana Hasil Kerja Pimpinan yang Diintervensi"
-              />
-              <input
-                id="rHasil"
-                class="input md:col-span-3"
-                placeholder="Rencana Hasil Kerja"
-              />
-              <input
-                id="rAspek"
-                class="input md:col-span-2"
-                placeholder="Aspek (Kuantitas/Kualitas/Waktu/Biaya)"
-              />
-              <input
-                id="rIndikator"
-                class="input md:col-span-2"
-                placeholder="Indikator Kinerja Individu"
-              />
-              <input
-                id="rTarget"
-                class="input md:col-span-1"
-                placeholder="Target"
-              />
-              <button class="btn primary md:col-span-12">
-                Tambah / Simpan
-              </button>
+              <input id="rPimpinan" class="input md:col-span-3" placeholder="Rencana Hasil Kerja Pimpinan yang Diintervensi" />
+              <input id="rHasil" class="input md:col-span-3" placeholder="Rencana Hasil Kerja" />
+              <input id="rAspek" class="input md:col-span-2" placeholder="Aspek (Kuantitas/Kualitas/Waktu/Biaya)" />
+              <input id="rIndikator" class="input md:col-span-2" placeholder="Indikator Kinerja Individu" />
+              <input id="rTarget" class="input md:col-span-1" placeholder="Target" />
+              <button class="btn primary md:col-span-12">Tambah / Simpan</button>
             </form>
 
             <div class="mt-4 overflow-x-auto">
@@ -506,37 +292,18 @@
 
         <!-- PENGATURAN -->
         <section id="page-pengaturan" class="page hidden">
-          <div
-            class="bg-white rounded-2xl border border-slate-200 p-4 space-y-4"
-          >
+          <div class="bg-white rounded-2xl border border-slate-200 p-4 space-y-4">
             <h3 class="text-sm font-semibold">Preferensi Akun</h3>
             <div class="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label class="label">Nama Lengkap</label
-                ><input class="input" value="Fahrizal Mudzaqi Maulana" />
-              </div>
-              <div>
-                <label class="label">NIP</label
-                ><input class="input" value="1999xxxxxxxxxxxx" />
-              </div>
-              <div>
-                <label class="label">Unit Kerja</label
-                ><input
-                  class="input"
-                  value="Badan Pendapatan Daerah"
-                  disabled
-                />
-              </div>
+              <div><label class="label">Nama Lengkap</label><input class="input" value="Fahrizal Mudzaqi Maulana" /></div>
+              <div><label class="label">NIP</label><input class="input" value="1999xxxxxxxxxxxx" /></div>
+              <div><label class="label">Unit Kerja</label><input class="input" value="Badan Pendapatan Daerah" disabled /></div>
             </div>
-            <div class="flex justify-end">
-              <button class="btn primary" id="btnSaveProfile">Simpan</button>
-            </div>
+            <div class="flex justify-end"><button class="btn primary" id="btnSaveProfile">Simpan</button></div>
           </div>
 
           <div class="bg-white rounded-2xl border border-slate-200 p-4">
-            <h3 class="text-sm font-semibold mb-2">
-              Kebijakan & Batasan (Mock)
-            </h3>
+            <h3 class="text-sm font-semibold mb-2">Kebijakan & Batasan (Mock)</h3>
             <ul class="list-disc pl-6 text-sm text-slate-600 space-y-1">
               <li>Penyerahan LKH maksimal H+1 pukul 10.00 WIT.</li>
               <li>Wajib melampirkan bukti untuk aktivitas Non-SKP.</li>
@@ -547,36 +314,23 @@
       </main>
     </div>
 
-    <footer
-      class="border-t border-slate-200 py-6 text-center text-xs text-slate-500"
-    >
-      © 2025 Badan Pendapatan Daerah Kabupaten Mimika • Mockup UI • Tidak
-      terhubung ke server
+    <footer class="border-t border-slate-200 py-6 text-center text-xs text-slate-500">
+      © 2025 Badan Pendapatan Daerah Kabupaten Mimika • Mockup UI • Tidak terhubung ke server
     </footer>
 
     <script>
       // ===== Utilities & Mock Store =====
       const el = (id) => document.getElementById(id);
-      const $$ = (sel, root = document) =>
-        Array.from(root.querySelectorAll(sel));
+      const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
       const STORE_KEY = "lkh_bapenda_store_v1";
       const store = {
         get() {
           try {
-            return (
-              JSON.parse(localStorage.getItem(STORE_KEY)) || {
-                items: [],
-                skp: null,
-              }
-            );
-          } catch {
-            return { items: [], skp: null };
-          }
+            return JSON.parse(localStorage.getItem(STORE_KEY)) || { items: [], skp: null };
+          } catch { return { items: [], skp: null }; }
         },
-        set(data) {
-          localStorage.setItem(STORE_KEY, JSON.stringify(data));
-        },
+        set(data) { localStorage.setItem(STORE_KEY, JSON.stringify(data)); },
       };
 
       const statusBadge = (s) => {
@@ -586,12 +340,10 @@
           DITOLAK: "bg-rose-50 text-rose-700 border-rose-200",
           DRAFT: "bg-slate-50 text-slate-700 border-slate-200",
         };
-        return `<span class="px-2 py-1 border text-[11px] rounded-lg ${
-          map[s] || "bg-slate-50"
-        }">${s}</span>`;
+        return `<span class="px-2 py-1 border text-[11px] rounded-lg ${map[s] || "bg-slate-50"}">${s}</span>`;
       };
 
-      // ===== Tailwind class presets =====
+      // ===== Tailwind presets =====
       const style = document.createElement("style");
       style.innerHTML = `
         .navlink { display:flex; align-items:center; gap:.5rem; padding:.60rem .75rem; border-radius:.75rem; font-size:.9rem; }
@@ -617,27 +369,18 @@
         $$(".page").forEach((p) => p.classList.add("hidden"));
         const page = document.querySelector(`#page-${hash.replace("#/", "")}`);
         if (page) page.classList.remove("hidden");
-        $$("#menu a").forEach((a) =>
-          a.classList.toggle("active", a.getAttribute("href") === hash)
-        );
+        $$("#menu a").forEach((a) => a.classList.toggle("active", a.getAttribute("href") === hash));
 
-        // refresh setiap pindah halaman
         refreshDashboard();
         renderHistory();
         if (hash === "#/rekap") renderRekap();
-        if (hash === "#/skp") {
-          ensureSKP();
-          renderSKPForms();
-          renderRHK();
-        }
+        if (hash === "#/skp") { ensureSKP(); renderSKPForms(); renderRHK(); }
       }
       window.addEventListener("hashchange", setActivePage);
 
-      // ===== Dashboard Boot =====
+      // ===== Dashboard =====
       function refreshDashboard() {
-        const data = store
-          .get()
-          .items.filter((d) => d.unit === "Badan Pendapatan Daerah");
+        const data = store.get().items.filter((d) => d.unit === "Badan Pendapatan Daerah");
         const total = data.filter((d) => d.status !== "DRAFT").length;
         const pending = data.filter((d) => d.status === "PENDING").length;
         const approved = data.filter((d) => d.status === "DISETUJUI").length;
@@ -650,50 +393,30 @@
         const bars = [approved, pending, rejected];
         const labels = ["Disetujui", "Pending", "Ditolak"];
         const max = Math.max(1, ...bars);
-        const chart = el("barChart");
-        const lab = el("barLabel");
+        const chart = el("barChart"); const lab = el("barLabel");
         if (!chart || !lab) return;
-        chart.innerHTML = "";
-        lab.innerHTML = "";
+        chart.innerHTML = ""; lab.innerHTML = "";
         bars.forEach((v, i) => {
           const h = (v / max) * 100;
           const div = document.createElement("div");
           div.className = "h-full flex items-end";
-          div.innerHTML = `<div style="height:${h}%" class="w-full rounded-t-md ${
-            i === 0
-              ? "bg-emerald-500"
-              : i === 1
-              ? "bg-amber-500"
-              : "bg-rose-500"
-          }" title="${labels[i]}: ${v}"></div>`;
+          div.innerHTML = `<div style="height:${h}%" class="w-full rounded-t-md ${i===0?"bg-emerald-500":i===1?"bg-amber-500":"bg-rose-500"}" title="${labels[i]}: ${v}"></div>`;
           chart.appendChild(div);
-          const lb = document.createElement("div");
-          lb.className = "text-center";
-          lb.textContent = labels[i];
-          lab.appendChild(lb);
+          const lb = document.createElement("div"); lb.className = "text-center"; lb.textContent = labels[i]; lab.appendChild(lb);
         });
       }
 
-      // ===== Input LKH Handlers =====
+      // ===== Input LKH =====
       const f = (id) => el(id).value;
       el("formLkh").addEventListener("submit", (e) => {
         e.preventDefault();
         const item = collectForm("PENDING");
-        const data = store.get();
-        data.items.push(item);
-        store.set(data);
-        alert("LKH dikirim (mock).");
-        location.hash = "#/riwayat";
-        renderHistory();
-        refreshDashboard();
+        const data = store.get(); data.items.push(item); store.set(data);
+        alert("LKH dikirim (mock)."); location.hash = "#/riwayat"; renderHistory(); refreshDashboard();
       });
       el("btnDraft").addEventListener("click", () => {
-        const item = collectForm("DRAFT");
-        const data = store.get();
-        data.items.push(item);
-        store.set(data);
-        alert("Draft disimpan (mock).");
-        renderHistory();
+        const item = collectForm("DRAFT"); const data = store.get(); data.items.push(item); store.set(data);
+        alert("Draft disimpan (mock)."); renderHistory();
       });
 
       function collectForm(status) {
@@ -701,7 +424,7 @@
         return {
           id: "LKH" + Date.now(),
           tanggal: f("fTanggal") || today.toISOString().slice(0, 10),
-          unit: "Badan Pendapatan Daerah",
+          unit: f("fUnit"),
           uraian: f("fUraian").trim() || "(tanpa uraian)",
           output: f("fOutput").trim() || "-",
           vol: Number(f("fVolume") || 1),
@@ -717,7 +440,7 @@
         };
       }
 
-      // ===== Riwayat =====
+      // ===== Riwayat (lengkap) =====
       function renderHistory() {
         const q = (el("searchHistory")?.value || "").toLowerCase();
         const fs = el("filterStatus")?.value || "";
@@ -727,29 +450,31 @@
           .filter((it) => it.uraian.toLowerCase().includes(q))
           .filter((it) => (fs ? it.status === fs : true))
           .sort((a, b) => b.tanggal.localeCompare(a.tanggal));
-        const tbody = el("historyBody");
-        if (!tbody) return;
-        tbody.innerHTML = data
-          .map(
-            (it) => `
-          <tr class="border-b last:border-0">
-            <td class="py-2 whitespace-nowrap">${it.tanggal}</td>
-            <td class="max-w-[380px] pr-4">${it.uraian}</td>
-            <td class="whitespace-nowrap">${it.output}</td>
-            <td class="text-center">${it.vol}</td>
-            <td>${statusBadge(it.status)}</td>
-            <td class="text-right">
-              <button class="text-emerald-700 hover:underline text-xs" onclick="editItem('${
-                it.id
-              }')">Edit</button>
-              <span class="mx-1 text-slate-300">|</span>
-              <button class="text-rose-600 hover:underline text-xs" onclick="deleteItem('${
-                it.id
-              }')">Hapus</button>
-            </td>
-          </tr>`
-          )
-          .join("");
+
+        const tbody = el("historyBody"); if (!tbody) return;
+        const linkify = (url) => url ? `<a href="${url}" target="_blank" class="text-emerald-700 hover:underline">Buka</a>` : `<span class="text-slate-400">-</span>`;
+
+        tbody.innerHTML =
+          data.map((it) => `
+            <tr class="border-b last:border-0 align-top">
+              <td class="py-2 whitespace-nowrap">${it.tanggal}</td>
+              <td class="whitespace-nowrap">${it.unit}</td>
+              <td class="max-w-[380px] pr-4">${it.uraian}</td>
+              <td class="whitespace-nowrap">${it.output}</td>
+              <td class="text-center">${it.vol}</td>
+              <td class="whitespace-nowrap">${it.satuan}</td>
+              <td class="whitespace-nowrap">${it.kategori}</td>
+              <td class="whitespace-nowrap">${it.start}–${it.end}</td>
+              <td class="whitespace-nowrap">${linkify(it.bukti)}</td>
+              <td class="whitespace-nowrap">${it.lokasi || "-"}</td>
+              <td>${statusBadge(it.status)}</td>
+              <td class="text-right whitespace-nowrap">
+                <button class="text-emerald-700 hover:underline text-xs" onclick="editItem('${it.id}')">Edit</button>
+                <span class="mx-1 text-slate-300">|</span>
+                <button class="text-rose-600 hover:underline text-xs" onclick="deleteItem('${it.id}')">Hapus</button>
+              </td>
+            </tr>
+          `).join("") || `<tr><td colspan="12" class="text-center py-3 text-slate-400">Belum ada data</td></tr>`;
       }
       el("searchHistory")?.addEventListener("input", renderHistory);
       el("filterStatus")?.addEventListener("change", renderHistory);
@@ -759,6 +484,7 @@
         const item = data.items.find((x) => x.id === id);
         if (!item) return;
         el("fTanggal").value = item.tanggal;
+        el("fUnit").value = item.unit;
         el("fUraian").value = item.uraian;
         el("fOutput").value = item.output;
         el("fVolume").value = item.vol;
@@ -777,8 +503,7 @@
         const data = store.get();
         data.items = data.items.filter((x) => x.id !== id);
         store.set(data);
-        renderHistory();
-        refreshDashboard();
+        renderHistory(); refreshDashboard();
       }
 
       // ===== Rekap =====
@@ -791,76 +516,41 @@
           .get()
           .items.filter((x) => x.tanggal >= from && x.tanggal <= to)
           .filter((x) => x.unit === "Badan Pendapatan Daerah")
-          .filter((x) =>
-            peg
-              ? x.pegawai.toLowerCase().includes(peg) || x.nip.includes(peg)
-              : true
-          )
+          .filter((x) => (peg ? x.pegawai.toLowerCase().includes(peg) || x.nip.includes(peg) : true))
           .filter((x) => (unit ? x.unit === unit : true))
           .filter((x) => x.status !== "DRAFT");
-        el("rekapBody").innerHTML = data
-          .map(
-            (x) => `
+
+        el("rekapBody").innerHTML = data.map((x) => `
           <tr class="border-b last:border-0">
             <td class="py-2 whitespace-nowrap">${x.tanggal}</td>
-            <td class="whitespace-nowrap">${
-              x.pegawai
-            } <span class="text-slate-400 text-[11px]">(${x.nip})</span></td>
+            <td class="whitespace-nowrap">${x.pegawai} <span class="text-slate-400 text-[11px]">(${x.nip})</span></td>
             <td class="whitespace-nowrap">${x.unit}</td>
             <td class="max-w-[450px] pr-4">${x.uraian}</td>
             <td class="whitespace-nowrap">${x.output}</td>
             <td>${x.vol}</td>
             <td class="whitespace-nowrap">${x.satuan}</td>
             <td>${statusBadge(x.status)}</td>
-          </tr>`
-          )
-          .join("");
+          </tr>
+        `).join("") || `<tr><td colspan="8" class="text-center py-3 text-slate-400">Tidak ada data</td></tr>`;
       }
       el("btnRekap").addEventListener("click", renderRekap);
       el("btnExport").addEventListener("click", () => {
-        const rows = [
-          [
-            "Tanggal",
-            "Pegawai",
-            "NIP",
-            "Unit",
-            "Uraian",
-            "Output",
-            "Vol",
-            "Satuan",
-            "Status",
-          ],
-        ];
-        el("rekapBody")
-          .querySelectorAll("tr")
-          .forEach((tr) => {
-            const tds = tr.querySelectorAll("td");
-            rows.push(
-              Array.from(tds).map((td) =>
-                td.innerText.replace(/\n/g, " ").trim()
-              )
-            );
-          });
-        const csv = rows
-          .map((r) =>
-            r.map((v) => `"${(v || "").replace(/"/g, '""')}"`).join(",")
-          )
-          .join("\n");
+        const rows = [["Tanggal","Pegawai","NIP","Unit","Uraian","Output","Vol","Satuan","Status"]];
+        el("rekapBody").querySelectorAll("tr").forEach((tr) => {
+          const tds = tr.querySelectorAll("td");
+          if (tds.length) rows.push(Array.from(tds).map((td) => td.innerText.replace(/\n/g, " ").trim()));
+        });
+        const csv = rows.map((r) => r.map((v) => `"${(v || "").replace(/"/g, '""')}"`).join(",")).join("\n");
         const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
         const url = URL.createObjectURL(blob);
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = "rekap_lkh_bapenda.csv";
-        a.click();
+        const a = document.createElement("a"); a.href = url; a.download = "rekap_lkh_bapenda.csv"; a.click();
         URL.revokeObjectURL(url);
       });
 
-      // ===== Pengaturan (disederhanakan) =====
-      document
-        .getElementById("btnSaveProfile")
-        .addEventListener("click", () => alert("Profil tersimpan (mock)."));
+      // ===== Pengaturan =====
+      document.getElementById("btnSaveProfile").addEventListener("click", () => alert("Profil tersimpan (mock)."));
 
-      // ======== SKP / RENCANA KERJA ========
+      // ===== SKP / RHK =====
       function ensureSKP() {
         const data = store.get();
         if (!data.skp) {
@@ -873,35 +563,14 @@
         }
         return data;
       }
-
       function renderSKPForms() {
         const d = ensureSKP().skp;
-        // pegawai
-        if (el("pNama")) {
-          el("pNama").value = d.pegawai.nama;
-          el("pNip").value = d.pegawai.nip;
-          el("pPangkat").value = d.pegawai.pangkat;
-          el("pJabatan").value = d.pegawai.jabatan;
-          el("pUnit").value = d.pegawai.unit;
-        }
-        // penilai
-        if (el("jNama")) {
-          el("jNama").value = d.penilai.nama;
-          el("jNip").value = d.penilai.nip;
-          el("jPangkat").value = d.penilai.pangkat;
-          el("jJabatan").value = d.penilai.jabatan;
-          el("jUnit").value = d.penilai.unit;
-        }
+        if (el("pNama")) { el("pNama").value = d.pegawai.nama; el("pNip").value = d.pegawai.nip; el("pPangkat").value = d.pegawai.pangkat; el("pJabatan").value = d.pegawai.jabatan; el("pUnit").value = d.pegawai.unit; }
+        if (el("jNama")) { el("jNama").value = d.penilai.nama; el("jNip").value = d.penilai.nip; el("jPangkat").value = d.penilai.pangkat; el("jJabatan").value = d.penilai.jabatan; el("jUnit").value = d.penilai.unit; }
       }
-
       function renderRHK() {
-        const d = ensureSKP().skp;
-        const tbody = el("rhkBody");
-        if (!tbody) return;
-        tbody.innerHTML =
-          d.items
-            .map(
-              (it, idx) => `
+        const d = ensureSKP().skp; const tbody = el("rhkBody"); if (!tbody) return;
+        tbody.innerHTML = d.items.map((it, idx) => `
           <tr class="border-b last:border-0">
             <td class="py-2">${it.no || idx + 1}</td>
             <td class="max-w-[260px] pr-3">${it.pimpinan || "-"}</td>
@@ -914,157 +583,46 @@
               <span class="mx-1 text-slate-300">|</span>
               <button class="text-rose-600 text-xs hover:underline" onclick="deleteRHK(${idx})">Hapus</button>
             </td>
-          </tr>`
-            )
-            .join("") ||
-          `<tr><td colspan="7" class="text-center text-slate-400 py-2">Belum ada RHK</td></tr>`;
+          </tr>
+        `).join("") || `<tr><td colspan="7" class="text-center text-slate-400 py-2">Belum ada RHK</td></tr>`;
       }
-
-      // Simpan Pegawai
       el("formPegawai")?.addEventListener("submit", (e) => {
         e.preventDefault();
         const all = ensureSKP();
-        all.skp.pegawai = {
-          nama: el("pNama").value.trim(),
-          nip: el("pNip").value.trim(),
-          pangkat: el("pPangkat").value.trim(),
-          jabatan: el("pJabatan").value.trim(),
-          unit: el("pUnit").value.trim(),
-        };
-        store.set(all);
-        alert("Data Pegawai disimpan.");
+        all.skp.pegawai = { nama: el("pNama").value.trim(), nip: el("pNip").value.trim(), pangkat: el("pPangkat").value.trim(), jabatan: el("pJabatan").value.trim(), unit: el("pUnit").value.trim() };
+        store.set(all); alert("Data Pegawai disimpan.");
       });
-
-      // Simpan Penilai
       el("formPenilai")?.addEventListener("submit", (e) => {
         e.preventDefault();
         const all = ensureSKP();
-        all.skp.penilai = {
-          nama: el("jNama").value.trim(),
-          nip: el("jNip").value.trim(),
-          pangkat: el("jPangkat").value.trim(),
-          jabatan: el("jJabatan").value.trim(),
-          unit: el("jUnit").value.trim(),
-        };
-        store.set(all);
-        alert("Data Pejabat Penilai disimpan.");
+        all.skp.penilai = { nama: el("jNama").value.trim(), nip: el("jNip").value.trim(), pangkat: el("jPangkat").value.trim(), jabatan: el("jJabatan").value.trim(), unit: el("jUnit").value.trim() };
+        store.set(all); alert("Data Pejabat Penilai disimpan.");
       });
-
-      // Tambah / Simpan RHK
       el("formRhk")?.addEventListener("submit", (e) => {
         e.preventDefault();
-        const item = {
-          no: el("rNo").value.trim(),
-          pimpinan: el("rPimpinan").value.trim(),
-          hasil: el("rHasil").value.trim(),
-          aspek: el("rAspek").value.trim(),
-          indikator: el("rIndikator").value.trim(),
-          target: el("rTarget").value.trim(),
-        };
-        const all = ensureSKP();
-        const idx = Number(el("formRhk").dataset.editIndex ?? -1);
-        if (Number.isInteger(idx) && idx >= 0) {
-          all.skp.items[idx] = item;
-          el("formRhk").dataset.editIndex = "";
-        } else {
-          all.skp.items.push(item);
-        }
-        store.set(all);
-        e.target.reset();
-        renderRHK();
+        const item = { no: el("rNo").value.trim(), pimpinan: el("rPimpinan").value.trim(), hasil: el("rHasil").value.trim(), aspek: el("rAspek").value.trim(), indikator: el("rIndikator").value.trim(), target: el("rTarget").value.trim() };
+        const all = ensureSKP(); const idx = Number(el("formRhk").dataset.editIndex ?? -1);
+        if (Number.isInteger(idx) && idx >= 0) { all.skp.items[idx] = item; el("formRhk").dataset.editIndex = ""; } else { all.skp.items.push(item); }
+        store.set(all); e.target.reset(); renderRHK();
       });
+      window.editRHK = (i) => { const it = ensureSKP().skp.items[i]; el("rNo").value = it.no || ""; el("rPimpinan").value = it.pimpinan || ""; el("rHasil").value = it.hasil || ""; el("rAspek").value = it.aspek || ""; el("rIndikator").value = it.indikator || ""; el("rTarget").value = it.target || ""; el("formRhk").dataset.editIndex = i; window.scrollTo({ top: 0, behavior: "smooth" }); };
+      window.deleteRHK = (i) => { const all = ensureSKP(); all.skp.items = all.skp.items.filter((_, idx) => idx !== i); store.set(all); renderRHK(); };
 
-      // Edit / Delete global
-      window.editRHK = (i) => {
-        const it = ensureSKP().skp.items[i];
-        el("rNo").value = it.no || "";
-        el("rPimpinan").value = it.pimpinan || "";
-        el("rHasil").value = it.hasil || "";
-        el("rAspek").value = it.aspek || "";
-        el("rIndikator").value = it.indikator || "";
-        el("rTarget").value = it.target || "";
-        el("formRhk").dataset.editIndex = i;
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      };
-      window.deleteRHK = (i) => {
-        const all = ensureSKP();
-        all.skp.items = all.skp.items.filter((_, idx) => idx !== i);
-        store.set(all);
-        renderRHK();
-      };
-
-      // Export CSV SKP
       el("btnExportSKP")?.addEventListener("click", () => {
-        const { skp } = ensureSKP();
-        const rows = [];
+        const { skp } = ensureSKP(); const rows = [];
         rows.push(["PEGAWAI YANG DINILAI"]);
-        rows.push([
-          "NAMA",
-          skp.pegawai.nama,
-          "NIP",
-          skp.pegawai.nip,
-          "PANGKAT/GOL",
-          skp.pegawai.pangkat,
-          "JABATAN",
-          skp.pegawai.jabatan,
-          "UNIT",
-          skp.pegawai.unit,
-        ]);
-        rows.push([]);
-        rows.push(["PEJABAT PENILAI"]);
-        rows.push([
-          "NAMA",
-          skp.penilai.nama,
-          "NIP",
-          skp.penilai.nip,
-          "PANGKAT/GOL",
-          skp.penilai.pangkat,
-          "JABATAN",
-          skp.penilai.jabatan,
-          "UNIT",
-          skp.penilai.unit,
-        ]);
-        rows.push([]);
-        rows.push([
-          "NO",
-          "RHK PIMPINAN",
-          "RHK",
-          "ASPEK",
-          "INDIKATOR",
-          "TARGET",
-        ]);
-        skp.items.forEach((it, i) =>
-          rows.push([
-            it.no || i + 1,
-            it.pimpinan,
-            it.hasil,
-            it.aspek,
-            it.indikator,
-            it.target,
-          ])
-        );
-        const csv = rows
-          .map((r) =>
-            r
-              .map((v) => `"${(v ?? "").toString().replace(/"/g, '""')}"`)
-              .join(",")
-          )
-          .join("\n");
+        rows.push(["NAMA", skp.pegawai.nama, "NIP", skp.pegawai.nip, "PANGKAT/GOL", skp.pegawai.pangkat, "JABATAN", skp.pegawai.jabatan, "UNIT", skp.pegawai.unit]);
+        rows.push([]); rows.push(["PEJABAT PENILAI"]);
+        rows.push(["NAMA", skp.penilai.nama, "NIP", skp.penilai.nip, "PANGKAT/GOL", skp.penilai.pangkat, "JABATAN", skp.penilai.jabatan, "UNIT", skp.penilai.unit]);
+        rows.push([]); rows.push(["NO","RHK PIMPINAN","RHK","ASPEK","INDIKATOR","TARGET"]);
+        skp.items.forEach((it,i)=>rows.push([it.no||i+1,it.pimpinan,it.hasil,it.aspek,it.indikator,it.target]));
+        const csv = rows.map((r)=>r.map((v)=>`"${(v??"").toString().replace(/"/g,'""')}"`).join(",")).join("\n");
         const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
-        const a = document.createElement("a");
-        a.href = URL.createObjectURL(blob);
-        a.download = "skp_rencana_kerja.csv";
-        a.click();
-        URL.revokeObjectURL(a.href);
+        const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "skp_rencana_kerja.csv"; a.click(); URL.revokeObjectURL(a.href);
       });
-
-      // Reset RHK
       el("btnResetSKP")?.addEventListener("click", () => {
         if (!confirm("Hapus semua RHK?")) return;
-        const all = ensureSKP();
-        all.skp.items = [];
-        store.set(all);
-        renderRHK();
+        const all = ensureSKP(); all.skp.items = []; store.set(all); renderRHK();
       });
 
       // ===== Init =====
@@ -1072,116 +630,30 @@
         const data = store.get();
         if (!data.items.length) {
           data.items = [
-            {
-              id: "seed1",
-              tanggal: "2025-11-01",
-              unit: "Badan Pendapatan Daerah",
-              uraian:
-                "Entry penerimaan harian pajak restoran & rekonsiliasi kas.",
-              output: "Laporan harian",
-              vol: 1,
-              satuan: "dokumen",
-              kategori: "SKP",
-              start: "08:00",
-              end: "10:00",
-              bukti: "",
-              lokasi: "Kantor",
-              pegawai: "Ani P.",
-              nip: "1987xxxxxxxxxxxx",
-              status: "DISETUJUI",
-            },
-            {
-              id: "seed2",
-              tanggal: "2025-11-02",
-              unit: "Badan Pendapatan Daerah",
-              uraian:
-                "Monitoring dashboard PAD dan tindak lanjut wajib pajak menunggak.",
-              output: "Daftar tindak lanjut",
-              vol: 1,
-              satuan: "dokumen",
-              kategori: "Non-SKP",
-              start: "10:30",
-              end: "12:00",
-              bukti: "",
-              lokasi: "Kantor",
-              pegawai: "Budi S.",
-              nip: "1989xxxxxxxxxxxx",
-              status: "PENDING",
-            },
-            {
-              id: "seed3",
-              tanggal: "2025-11-03",
-              unit: "Badan Pendapatan Daerah",
-              uraian:
-                "Penyusunan surat edaran penagihan pajak daerah triwulan IV.",
-              output: "Draft surat",
-              vol: 1,
-              satuan: "dokumen",
-              kategori: "SKP",
-              start: "13:00",
-              end: "15:00",
-              bukti: "",
-              lokasi: "Kantor",
-              pegawai: "Fahrizal M.",
-              nip: "1999xxxxxxxxxxxx",
-              status: "DITOLAK",
-            },
+            { id:"seed1", tanggal:"2025-11-01", unit:"Badan Pendapatan Daerah", uraian:"Entry penerimaan harian pajak restoran & rekonsiliasi kas.", output:"Laporan harian", vol:1, satuan:"dokumen", kategori:"SKP", start:"08:00", end:"10:00", bukti:"", lokasi:"Kantor", pegawai:"Ani P.", nip:"1987xxxxxxxxxxxx", status:"DISETUJUI" },
+            { id:"seed2", tanggal:"2025-11-02", unit:"Badan Pendapatan Daerah", uraian:"Monitoring dashboard PAD dan tindak lanjut wajib pajak menunggak.", output:"Daftar tindak lanjut", vol:1, satuan:"dokumen", kategori:"Non-SKP", start:"10:30", end:"12:00", bukti:"", lokasi:"Kantor", pegawai:"Budi S.", nip:"1989xxxxxxxxxxxx", status:"PENDING" },
+            { id:"seed3", tanggal:"2025-11-03", unit:"Badan Pendapatan Daerah", uraian:"Penyusunan surat edaran penagihan pajak daerah triwulan IV.", output:"Draft surat", vol:1, satuan:"dokumen", kategori:"SKP", start:"13:00", end:"15:00", bukti:"", lokasi:"Kantor", pegawai:"Fahrizal M.", nip:"1999xxxxxxxxxxxx", status:"DITOLAK" },
           ];
         }
         if (!data.skp) {
           data.skp = {
-            pegawai: {
-              nama: "FAHRIZAL MUDZAQI MAULANA",
-              nip: "196703101988031009",
-              pangkat: "III/b",
-              jabatan: "STAF BAPENDA",
-              unit: "BAPENDA",
-            },
-            penilai: {
-              nama: "AYUB LAKSONO",
-              nip: "198806182007011001",
-              pangkat: "IV/a",
-              jabatan: "KEPALA BIDANG",
-              unit: "BAPENDA",
-            },
+            pegawai: { nama:"FAHRIZAL MUDZAQI MAULANA", nip:"196703101988031009", pangkat:"III/b", jabatan:"STAF BAPENDA", unit:"BAPENDA" },
+            penilai: { nama:"AYUB LAKSONO", nip:"198806182007011001", pangkat:"IV/a", jabatan:"KEPALA BIDANG", unit:"BAPENDA" },
             items: [
-              {
-                no: "1",
-                pimpinan:
-                  "Meningkatnya Tatakelola Birokrasi Pemerintahan Efektif, Efisien, Akuntabel",
-                hasil:
-                  "Dokumen Penilaian AKIP Perangkat Daerah disajikan lengkap dan tepat waktu",
-                aspek: "Kuantitas/Kualitas/Waktu",
-                indikator: "Jumlah & Kesesuaian Dokumen AKIP, Ketepatan Waktu",
-                target: "1 dokumen; 81 indeks; 7 bulan",
-              },
-              {
-                no: "2",
-                pimpinan: "",
-                hasil:
-                  "Laporan realisasi Anggaran Kecamatan Ngoro siap dievaluasi pimpinan",
-                aspek: "Kuantitas/Waktu/Biaya",
-                indikator:
-                  "Jumlah laporan keuangan, ketepatan waktu, realisasi anggaran",
-                target: "1 dokumen; 2 bulan; 91.5%",
-              },
+              { no:"1", pimpinan:"Meningkatnya Tatakelola Birokrasi Pemerintahan Efektif, Efisien, Akuntabel", hasil:"Dokumen Penilaian AKIP Perangkat Daerah disajikan lengkap dan tepat waktu", aspek:"Kuantitas/Kualitas/Waktu", indikator:"Jumlah & Kesesuaian Dokumen AKIP, Ketepatan Waktu", target:"1 dokumen; 81 indeks; 7 bulan" },
+              { no:"2", pimpinan:"", hasil:"Laporan realisasi Anggaran Kecamatan Ngoro siap dievaluasi pimpinan", aspek:"Kuantitas/Waktu/Biaya", indikator:"Jumlah laporan keuangan, ketepatan waktu, realisasi anggaran", target:"1 dokumen; 2 bulan; 91.5%" },
             ],
           };
         }
         store.set(data);
       }
 
-      // Bind menu
       window.addEventListener("load", () => {
         bootSample();
-        setActivePage(); // tampilkan halaman awal
-        renderHistory(); // siapkan riwayat
-        renderRekap(); // siapkan rekap
-        if (location.hash === "#/skp") {
-          ensureSKP();
-          renderSKPForms();
-          renderRHK();
-        }
+        setActivePage();
+        renderHistory();
+        renderRekap();
+        if (location.hash === "#/skp") { ensureSKP(); renderSKPForms(); renderRHK(); }
       });
     </script>
   </body>
